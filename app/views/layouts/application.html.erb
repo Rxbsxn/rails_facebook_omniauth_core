@@ -10,5 +10,9 @@
 
   <body>
     <%= yield %>
+  <% if current_user %>
+      <%= image_tag(current_user.image) %>
+      <%= current_user.name %>
+    <% end %>
   </body>
 </html>
